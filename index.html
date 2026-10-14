@@ -162,8 +162,8 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .reel .tilt-wrap:nth-child(odd) { transform: rotate(-2.5deg); }
 .reel .tilt-wrap:nth-child(even) { transform: rotate(2.5deg) translateY(10px); }
 @media (min-width: 760px) {
-  .reel { overflow: visible; margin-inline: 0; padding-inline: 0; scroll-snap-type: none; }
-  .reel .tilt-wrap { flex: 1 1 0; min-width: 0; }
+  .reel { flex-wrap: wrap; justify-content: center; row-gap: 30px; overflow: visible; margin-inline: 0; padding-inline: 0; scroll-snap-type: none; }
+  .reel .tilt-wrap { flex: 0 0 calc((100% - 60px) / 4); min-width: 0; }
 }
 
 /* Avatars + eyes/mouth motion */
@@ -447,26 +447,80 @@ var MOMENTS = [
   {
     "caption": "Festive day, favorite people",
     "alt": "Her and her friends smiling together in festive outfits",
-    "pos": "50% 50%",
+    "pos": "50% 38%",
     "img": "images/memory-1.jpg"
   },
   {
     "caption": "Dancing in white and gold",
     "alt": "Friends in white and gold sarees posing playfully outdoors",
-    "pos": "50% 50%",
+    "pos": "50% 38%",
     "img": "images/memory-2.jpg"
   },
   {
     "caption": "Mountains and good company",
     "alt": "A group in traditional striped outfits beside a river, with a fortress behind",
-    "pos": "50% 50%",
+    "pos": "50% 38%",
     "img": "images/memory-3.jpg"
   },
   {
     "caption": "Three smiles, one doorway",
     "alt": "Three people in traditional outfits in front of a painted wooden door",
-    "pos": "50% 50%",
+    "pos": "50% 38%",
     "img": "images/memory-4.jpg"
+  },
+  {
+    "caption": "Friends and a tiny new friend",
+    "alt": "Four friends on a tree-lined street, one holding a baby",
+    "pos": "50% 38%",
+    "img": "images/memory-5.jpg"
+  },
+  {
+    "caption": "Golden hour by the water",
+    "alt": "A big group of friends posing on a grassy bank by a lake",
+    "pos": "50% 40%",
+    "img": "images/memory-6.jpg"
+  },
+  {
+    "caption": "Dinner dates, always",
+    "alt": "Four friends smiling in front of a glowing restaurant sign",
+    "pos": "50% 38%",
+    "img": "images/memory-7.jpg"
+  },
+  {
+    "caption": "All dressed up",
+    "alt": "Four friends in sarees against cream curtains",
+    "pos": "50% 38%",
+    "img": "images/memory-8.jpg"
+  },
+  {
+    "caption": "A festive evening",
+    "alt": "Smiling in a black sequin saree beside a friend in a green kurta",
+    "pos": "50% 38%",
+    "img": "images/memory-9.jpg"
+  },
+  {
+    "caption": "Under a thousand lights",
+    "alt": "Standing under a glowing arch of fairy lights",
+    "pos": "50% 38%",
+    "img": "images/memory-10.jpg"
+  },
+  {
+    "caption": "Black, sparkle and big smiles",
+    "alt": "Posing with a friend in black outfits against cream curtains",
+    "pos": "50% 38%",
+    "img": "images/memory-11.jpg"
+  },
+  {
+    "caption": "Sunset on the sand",
+    "alt": "A group of friends on a beach under a pink sky",
+    "pos": "50% 72%",
+    "img": "images/memory-12.jpg"
+  },
+  {
+    "caption": "Big hugs, one sleepy dog",
+    "alt": "Three friends hugging beside a sleeping dog",
+    "pos": "50% 38%",
+    "img": "images/memory-13.jpg"
   }
 ];
 
