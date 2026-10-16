@@ -320,7 +320,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
 <main class="wrap" id="main">
   <section class="hero">
     <div class="hero-copy">
-      <span class="eyebrow h-item" style="--d:.05s">Made for your birthday</span>
+      <span class="eyebrow h-item" style="--d:.05s">Made for you</span>
       <h1 class="h-item" style="--d:.15s">Happy Birthday, <span id="herName"></span></h1>
       <p class="lede h-item" style="--d:.3s" id="heroText"></p>
       <div class="crowd h-item" id="crowd" aria-hidden="true" style="--d:.4s"></div>
@@ -360,8 +360,8 @@ button { font: inherit; color: inherit; cursor: pointer; }
 
   <section class="sec" aria-labelledby="ph">
     <header class="rise">
-      <h2 id="ph">Your pamper menu</h2>
-      <p>Tap a coupon to redeem it. Every one is valid today and on any day you need it.</p>
+      <h2 id="ph">Your birthday bucket list</h2>
+      <p>Little things to explore, taste and achieve. Tap a card, then go tick it off whenever you are ready.</p>
     </header>
     <div class="coupons" id="coupons"></div>
   </section>
@@ -431,15 +431,17 @@ var CONFIG = {
 
 /* IMAGES: every photo lives in the images/ folder. To change one, replace the file or edit its path below. */
 var FRIENDS = [
-  { name: "Friend 1", hair: "#4a2c2a", skin: "#f3c9a5", style: "long", top: "#ff9fbd", glasses: false, img: "images/friend-1.jpg", msg: "Happy birthday! I have officially declared today a national cake day." },
-  { name: "Friend 2", hair: "#4a2c2a", skin: "#f3c9a5", style: "long", top: "#ff9fbd", glasses: false, img: "images/friend-2.jpg", msg: "Another year older, same amazing you. Please eat dessert first." },
-  { name: "Friend 3", hair: "#4a2c2a", skin: "#f3c9a5", style: "long", top: "#ff9fbd", glasses: false, img: "images/friend-3.jpg", msg: "I saved you the best seat at the table. Do not make me wait." },
-  { name: "Friend 4", hair: "#4a2c2a", skin: "#f3c9a5", style: "long", top: "#ff9fbd", glasses: false, img: "images/friend-4.jpg", msg: "May your day be loud, silly and full of snacks." },
-  { name: "Friend 5", hair: "#4a2c2a", skin: "#f3c9a5", style: "long", top: "#ff9fbd", glasses: false, img: "images/friend-5.jpg", msg: "You make every plan better. Now go celebrate yourself." },
-  { name: "Friend 6", hair: "#4a2c2a", skin: "#f3c9a5", style: "long", top: "#ff9fbd", glasses: false, img: "images/friend-6.jpg", msg: "Sending you the biggest virtual hug. Hold still, it is arriving." },
-  { name: "Friend 7", hair: "#4a2c2a", skin: "#f3c9a5", style: "long", top: "#ff9fbd", glasses: false, img: "images/friend-7.jpg", msg: "Wishing you a year of tiny joys and one very big adventure." },
-  { name: "Friend 8", hair: "#4a2c2a", skin: "#f3c9a5", style: "long", top: "#ff9fbd", glasses: false, img: "images/friend-8.jpg", msg: "I am bringing the playlist. You bring the dancing." },
-  { name: "Friend 9", hair: "#4a2c2a", skin: "#f3c9a5", style: "long", top: "#ff9fbd", glasses: false, img: "images/friend-9.jpg", msg: "Today you are the main character. Act accordingly." }
+  { name: "Fayiz", hair: "#4a2c2a", skin: "#f3c9a5", style: "long", top: "#ff9fbd", glasses: false, img: "images/fayiz.jpg", msg: "Today you are the main character. Act accordingly." },
+  { name: "Shalib", hair: "#4a2c2a", skin: "#f3c9a5", style: "long", top: "#ff9fbd", glasses: false, img: "images/shalib.jpg", msg: "Sending you the biggest virtual hug. Hold still, it is arriving." },
+  { name: "Miriam", hair: "#4a2c2a", skin: "#f3c9a5", style: "long", top: "#ff9fbd", glasses: false, img: "images/miriam.jpg", msg: "May your day be loud, silly and full of snacks." },
+  { name: "Athul", hair: "#4a2c2a", skin: "#f3c9a5", style: "long", top: "#ff9fbd", glasses: false, img: "images/athul.jpg", msg: "Happy birthday! I have officially declared today a national cake day." },
+  { name: "Anusree", hair: "#4a2c2a", skin: "#f3c9a5", style: "long", top: "#ff9fbd", glasses: false, img: "images/anusree.jpg", msg: "Wishing you a year of tiny joys and one very big adventure." },
+  { name: "Zimryn", hair: "#4a2c2a", skin: "#f3c9a5", style: "long", top: "#ff9fbd", glasses: false, img: "images/zimryn.jpg", msg: "Your laugh is my favorite sound in any room. Never lose it, birthday girl." },
+  { name: "Ajay", hair: "#4a2c2a", skin: "#f3c9a5", style: "long", top: "#ff9fbd", glasses: false, img: "images/ajay.jpg", msg: "I am bringing the playlist. You bring the dancing." },
+  { name: "Nikitha", hair: "#4a2c2a", skin: "#f3c9a5", style: "long", top: "#ff9fbd", glasses: false, img: "images/nikitha.jpg", msg: "I saved you the best seat at the table. Do not make me wait." },
+  { name: "Jerin", hair: "#4a2c2a", skin: "#f3c9a5", style: "long", top: "#ff9fbd", glasses: false, img: "images/jerin.jpg", msg: "Cake is on me today. Just promise me the biggest slice goes to you." },
+  { name: "Hannah", hair: "#4a2c2a", skin: "#f3c9a5", style: "long", top: "#ff9fbd", glasses: false, img: "images/hannah.jpg", msg: "You make every plan better. Now go celebrate yourself." },
+  { name: "Amitha", hair: "#4a2c2a", skin: "#f3c9a5", style: "long", top: "#ff9fbd", glasses: false, img: "images/amitha.jpg", msg: "Another year older, same amazing you. Please eat dessert first." }
 ];
 
 /* prop: friends | book | film | plane (placeholder drawing only) */
@@ -525,12 +527,12 @@ var MOMENTS = [
 ];
 
 var COUPONS = [
-  { tag: "Soak",  title: "Bubble bath",      perk: "One long, warm soak with your favorite music and your phone on silent." },
-  { tag: "Glow",  title: "Face mask hour",   perk: "Mask on, hair up, zero guilt. Valid for a full hour." },
-  { tag: "Nap",   title: "Sleep-in pass",    perk: "Good for one morning with no alarm at all." },
-  { tag: "Yum",   title: "Treat yourself",   perk: "Your favorite snack, eaten slowly and without sharing." },
-  { tag: "Rest",  title: "Do-nothing pass",  perk: "One afternoon with absolutely no chores and no apologies." },
-  { tag: "Dream", title: "Daydream break",   perk: "Ten minutes to stare out of a window and think of something lovely." }
+  { tag: "Explore", title: "Wander somewhere new", perk: "Pick a place you have never been and go see it. No plan needed, just curiosity." },
+  { tag: "Taste",   title: "Try a brand-new cuisine", perk: "Find a restaurant you have never tried and order the dish you cannot pronounce." },
+  { tag: "Feast",   title: "Enjoy a great sadhya", perk: "A banana leaf, every curry, and payasam at the end. Take your time with it." },
+  { tag: "Sea",     title: "Watch the beach turn gold", perk: "Sit on the sand and stay until the sky changes colour." },
+  { tag: "Read",    title: "Get lost in a book", perk: "Pick a story, find a cosy corner, and forget about the clock for an afternoon." },
+  { tag: "Achieve", title: "Chase one big goal", perk: "Choose the thing you have been wanting to achieve and take the very first step." }
 ];
 
 var NOTES = [
@@ -715,7 +717,7 @@ COUPONS.forEach(function (c, i) {
   var b = el("button", "coupon glass rise"); b.type = "button"; b.setAttribute("aria-pressed", "false");
   b.appendChild(el("div", "tag", c.tag));
   b.appendChild(el("strong", "", c.title));
-  b.appendChild(el("span", "tap", "Tap to redeem"));
+  b.appendChild(el("span", "tap", "Tap to open"));
   var pw = el("div", "pw"), inn = el("div"); inn.appendChild(el("p", "perk", c.perk)); pw.appendChild(inn); b.appendChild(pw);
   b.addEventListener("click", function () { b.setAttribute("aria-pressed", b.getAttribute("aria-pressed") === "true" ? "false" : "true"); });
   t("coupons").appendChild(b);
